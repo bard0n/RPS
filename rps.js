@@ -1,7 +1,6 @@
 let choiceInt;
 let playerSelection;
 let computerSelection;
-let result=0;
 let rounds=0;
 var wins=0;
 var losses=0;
