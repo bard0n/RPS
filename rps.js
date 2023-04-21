@@ -23,8 +23,17 @@ function getComputerChoice() {
     }
 }
 
-function playRound(playerSelection, computerSelection) {
-    playerSelection = prompt("Type Rock, Paper, or Scissors.", "").toLowerCase();
+function getChoiceAndPlay(choice) {
+    playerSelection = choice;
+    playRound();
+}
+
+function playRound() {
+    //playerSelection = prompt("Type Rock, Paper, or Scissors.", "").toLowerCase();
+    console.log(playerSelection);
+    randomizeComputerChoice();
+    getComputerChoice();
+    console.log(computerSelection);
     if (playerSelection==computerSelection) {
         console.log("You tied this round!");
     }   else if (playerSelection=="rock" && computerSelection=="scissors") {
@@ -66,5 +75,3 @@ function game() {
      }
     
 
-
-game();
