@@ -5,13 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script src="rps.js"></script>
-    <div id="ui-buttons">
-        <button onClick="getChoiceAndPlay('rock')">Rock</button>
-        <button onClick="getChoiceAndPlay('paper')">Paper</button>
-        <button onClick="getChoiceAndPlay('scissors')">Scissors</button>
+
+    <div class="title">Rock, Paper, Scissors</div>
+
+    <div class="uibuttons">
+        <div class="choice" onClick="getChoiceAndPlay('rock')">
+            <img onClick="getChoiceAndPlay('rock')" id="rockbutton" src="./images/rock.png"></img>
+            <div class="text">Rock</div>
+        </div>
+        <div class="choice" onClick="getChoiceAndPlay('paper')">
+            <img onClick="getChoiceAndPlay('paper')" id="paperbutton" src="./images/paper.png"></img>
+            <div class="text">Paper</div>
+        </div>
+        <div class="choice" onClick="getChoiceAndPlay('scissors')">
+            <img onClick="getChoiceAndPlay('scissors')" id="scissorsbutton" src="./images/scissors.png"></img>
+            <div class="text">Scissors</div>
+        </div>
     </div>
+    <div class="result">
+
+    </div>
+
+    <div class="footer">
+        By&nbsp; <a href="https://github.com/bard0n">bard0n</a>
+    </div>
+    <script src="rps.js"></script>
 </body>
 </html>
