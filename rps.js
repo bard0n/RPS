@@ -4,11 +4,29 @@ let computerSelection;
 let rounds=0;
 var wins=0;
 var losses=0;
+var playerNumber=0;
+let playerImage = document.createElement("img");;
+let computerImage = document.createElement("img");;
+
+var playerPick = document.querySelector('.player');
+var computerPick = document.querySelector('.computer');
 
 var result = document.querySelector('.result');
+var score = document.querySelector('.score');
+var display = document.querySelector('.display');
 
 function random() {
     return Math.floor((Math.random() * 3)+1)
+}
+
+function getPlayerNumber() {
+    if(playerSelection=="rock") {
+        playerNumber=1;
+    } else if(playerSelection=="paper") {
+        playerNumber=2;
+    } else if(playerSelection=="scissors") {
+        playerNumber=3;
+    }
 }
 
 function randomizeComputerChoice() {
@@ -35,36 +53,72 @@ function playRound() {
     console.log(playerSelection);
     randomizeComputerChoice();
     getComputerChoice();
+    getPlayerNumber()
+    playerImage.src= "./images/choice"+playerNumber+".png";
+    computerImage.src= "./images/choice"+choiceInt+".png";
     console.log(computerSelection);
     if (playerSelection==computerSelection) {
         console.log("You tied this round!");
         result.textContent = "You tied this round!";
+        score.textContent = `Wins: ${wins}      Losses: ${losses}`;
+        playerPick.appendChild(playerImage);
+        computerPick.appendChild(computerImage);
     }   else if (playerSelection=="rock" && computerSelection=="scissors") {
         console.log("You win this round!");
         result.textContent = "You won this round!";
-        wins+=1;
+        playerPick.appendChild(playerImage);
+        computerPick.appendChild(computerImage);
+        ++wins;
+        score.textContent = `Wins: ${wins}      Losses: ${losses}`;
     }   else if (playerSelection=="scissors" && computerSelection=="paper") {
         console.log("You win this round!");
         result.textContent = "You won this round!";
-        wins+=1;
+        playerPick.appendChild(playerImage);
+        computerPick.appendChild(computerImage);
+        ++wins;
+        score.textContent = `Wins: ${wins}      Losses: ${losses}`;
     }   else if (playerSelection=="paper" && computerSelection=="rock") {
         console.log("You win this round!");
         result.textContent = "You won this round!";
-        wins+=1;
+        playerPick.appendChild(playerImage);
+        computerPick.appendChild(computerImage);
+        ++wins;
+        score.textContent = `Wins: ${wins}      Losses: ${losses}`;
     }   else if (computerSelection=="rock" && playerSelection=="scissors") {
         console.log("You lose this round!");
         result.textContent = "You lost this round!";
-        losses+=1;
+        playerPick.appendChild(playerImage);
+        computerPick.appendChild(computerImage);
+        ++losses;
+        score.textContent = `Wins: ${wins}      Losses: ${losses}`;
     }   else if (computerSelection=="scissors" && playerSelection=="paper") {
         console.log("You lose this round!");
         result.textContent = "You lost this round!";
-        losses+=1;
+        playerPick.appendChild(playerImage);
+        computerPick.appendChild(computerImage);
+        ++losses;
+        score.textContent = `Wins: ${wins}      Losses: ${losses}`;
     }   else if (computerSelection=="paper" && playerSelection=="rock") {
         console.log("You lose this round!");
         result.textContent = "You lost this round!";
-        losses+=1;
+        playerPick.appendChild(playerImage);
+        computerPick.appendChild(computerImage);
+        ++losses;
+        score.textContent = `Wins: ${wins}      Losses: ${losses}`;
     }   else {
         console.log("Try again.");
+    }
+}
+
+function gameCheck() {
+    if(wins == 5) {
+        result.textContent = "You Win! Pick again to retry.";
+        wins=0;
+        losses=0;
+    } else if(losses == 5) {
+        result.textContent = "The Computer Wins! Pick again to retry.";
+        wins=0;
+        losses=0;
     }
 }
 

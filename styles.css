@@ -1,9 +1,16 @@
 
+html, body {
+    margin:0;
+    padding:0;
+}
+
 body {
     text-align: center;
     font-family: 'Arvo', serif;
     font-family: 'Roboto', sans-serif;
 }
+
+
 
 .choice img {
     width: 200px;
@@ -25,9 +32,12 @@ body {
 }
 
 .title {
+    padding: 0;
+    margin-left: 0;
     margin-bottom: 50px;
     font-size: 36px;
     font-weight: 900;
+    background-color: #eee;
 }
 
 .uibuttons {
@@ -35,6 +45,8 @@ body {
     gap: 100px;
     justify-content: center;
 }
+
+
 
 .choice {
     max-width: 200px;
@@ -46,10 +58,27 @@ body {
     font-weight: bold;
 }
 
-.result {
+.display {
     margin-top: 100px;
     font-size: 72px;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.result {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-size: 72px;
     font-weight: 900;
+}
+
+.score {
+    font-size: 56px;
+    padding-top: 100px;
+    font-weight: bold;
 }
 
 .footer {

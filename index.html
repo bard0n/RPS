@@ -12,21 +12,29 @@
     <div class="title">Rock, Paper, Scissors</div>
 
     <div class="uibuttons">
-        <div class="choice" onClick="getChoiceAndPlay('rock')">
-            <img onClick="getChoiceAndPlay('rock')" id="rockbutton" src="./images/rock.png"></img>
+        <div class="choice" onClick="getChoiceAndPlay('rock');gameCheck()">
+            <img id="rockbutton" src="./images/choice1.png"></img>
             <div class="text">Rock</div>
         </div>
-        <div class="choice" onClick="getChoiceAndPlay('paper')">
-            <img onClick="getChoiceAndPlay('paper')" id="paperbutton" src="./images/paper.png"></img>
+        <div class="choice" onClick="getChoiceAndPlay('paper');gameCheck()">
+            <img id="paperbutton" src="./images/choice2.png"></img>
             <div class="text">Paper</div>
         </div>
-        <div class="choice" onClick="getChoiceAndPlay('scissors')">
-            <img onClick="getChoiceAndPlay('scissors')" id="scissorsbutton" src="./images/scissors.png"></img>
+        <div class="choice" onClick="getChoiceAndPlay('scissors');gameCheck()">
+            <img id="scissorsbutton" src="./images/choice3.png"></img>
             <div class="text">Scissors</div>
         </div>
     </div>
     <div class="result">
-
+        Choose Your Weapon
+    </div>
+    <div class="display">
+        <div class="player"></div>
+        <div class="vs">VS</div>
+        <div class="computer"></div>
+    </div>
+    <div class="score">
+        Wins: 0 Losses: 0
     </div>
 
     <div class="footer">
