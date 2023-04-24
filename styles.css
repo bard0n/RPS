@@ -59,7 +59,7 @@ body {
 }
 
 .display {
-    margin-top: 100px;
+    margin-top: 50px;
     font-size: 36px;
     display: flex;
     gap: 100px;
@@ -69,15 +69,15 @@ body {
 }
 
 .result {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     font-size: 36px;
     font-weight: 900;
 }
 
 .score {
     font-size: 30px;
-    padding-top: 100px;
+    padding-top: 50px;
     font-weight: bold;
 }
 
