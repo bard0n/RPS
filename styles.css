@@ -81,6 +81,7 @@ img {
 .score {
     font-size: 30px;
     font-weight: bold;
+    padding-top: 10px;
 }
 
 .footer {
