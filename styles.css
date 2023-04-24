@@ -80,7 +80,7 @@ img {
 
 .score {
     font-size: 30px;
-    padding-top: 50px;
+    padding: 50px;
     font-weight: bold;
 }
 
@@ -89,7 +89,7 @@ img {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 52px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
