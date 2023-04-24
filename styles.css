@@ -10,11 +10,14 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-
+img {
+    width: 1500px;
+    height: auto;
+}
 
 .choice img {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     cursor: url(), pointer;
     border-radius: 100%;
     border: solid 10px transparent;
